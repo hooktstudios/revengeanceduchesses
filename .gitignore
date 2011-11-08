@@ -1,3 +1,5 @@
 wp-config.php
 sitemap.xml
 sitemap.xml.gz
+.sass-cache/*
+wp-content/themes/mvmm/.sass-cache/*
