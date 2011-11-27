@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^(.*)-(.*).css  index.php?g=$1  [L,NE]
+RewriteRule ^(.*)-(.*).js  index.php?g=$1  [L,NE]
+</IfModule>
+<IfModule mod_env.c>
+# In case AddOutputFilterByType has been added
+SetEnv no-gzip
+</IfModule>

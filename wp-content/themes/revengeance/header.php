@@ -8,6 +8,13 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
+$revision = '';
+$production = false;
+if (file_exists('REVISION')) 
+{
+	$revision = file_get_contents('REVISION');
+	$production = true;
+}
 ?><!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
@@ -46,11 +53,21 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/revengeance/style.css" />
+<?php if ($production): ?>
+	<link rel="stylesheet" type="text/css" media="all" href="/min/revengeance_css-<?php echo $revision ?>.css" />
+<?php else: ?>
+	<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/revengeance/style.css" />
+<?php endif ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="/wp-content/themes/revengeance/js/html5.js" type="text/javascript"></script>
 <![endif]-->
+<?php if ($production): ?>
+<script type="text/javascript" src="/min/revengeance_js-<?php echo $revision ?>.js"></script>
+<?php else: ?>
+<script type="text/javascript" src="/wp-content/themes/revengeance/js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/revengeance/js/default.js"></script>
+<?php endif ?>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
