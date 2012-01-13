@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'capistrano/ext/multistage'
 require 'rvm/capistrano'
+require 'bundler/capistrano'
 set :rvm_ruby_string, '1.9.3'
 set :rvm_type, :user
 
@@ -59,7 +60,7 @@ namespace :deploy do
   end
 end
 
-
+before 'deploy:finalize_update', 'bundle:install'
 before "deploy:restart", "deploy:link_configs"
 after "deploy:restart", "deploy:cleanup"
 before "deploy:setup", "deploy:setup_rvm"
