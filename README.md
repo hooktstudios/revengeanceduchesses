@@ -30,9 +30,9 @@ Before using capistrano you must enable SSH agent forwarding by running this com
 
 By default it deploys to the development environment
 
-	cap [development|production] deploy
+	cap [dev|prod] deploy
 
 Each environnment is mapped to a default branch :
 
-development = master
-production = production
+	dev = master
+	prod = production
