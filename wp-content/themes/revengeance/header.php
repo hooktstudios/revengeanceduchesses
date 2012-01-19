@@ -10,7 +10,7 @@
  */
 $revision = '';
 $production = false;
-if (file_exists('REVISION')) 
+if (file_exists('REVISION'))
 {
 	$revision = file_get_contents('REVISION');
 	$production = true;
@@ -85,19 +85,16 @@ if (file_exists('REVISION'))
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed">
-	<header id="header-wrap" role="banner">
-		<div class="inner">
+	<div id="duchesses"></div>
+	<div id="wrap"></div>
+	<div id="content-wrap">
+		<header id="header-wrap" role="banner">
 			<hgroup>
-				<h1 id="site-title"><a id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+				<h1 id="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			</hgroup>
 
 			<nav id="main-nav" role="navigation">
 				<ul id="menu-principal" class="menu">
 				</ul>
 			</nav>
-		</div>
-	</header>
-
-	<div id="content">
+		</header>
