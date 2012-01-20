@@ -39,7 +39,7 @@ namespace :deploy do
  
  desc "This is here to overide the original task"
  task :finalize_update, :roles => :app do
-   run "sass #{release_path}/wp-content/themes/revengeance/style.scss:#{release_path}/wp-content/themes/revengeance/style.css"
+   run "cd #{release_path} && bundle exec sass #{release_path}/wp-content/themes/revengeance/style.scss:#{release_path}/wp-content/themes/revengeance/style.css"
    run "chmod 777 #{release_path}"
  end
 
@@ -56,7 +56,9 @@ namespace :deploy do
   task :setup_rvm do
     run "bash < <(curl -s https://rvm.beginrescueend.com/install/rvm)"
     run "source ~/.bashrc"
+    run "rvm get stable"
     run "rvm install #{rvm_ruby_string}"
+    run "rvm use #{rvm_ruby_string} --default"
   end
 end
 
