@@ -72,6 +72,22 @@ body {
 	width: 401px;
 }
 
+footer {
+	padding:65px 0 12px 65px;
+	li {
+		display:block;
+		float:left;
+		margin-right:32px;
+		a {
+			font-size:11px;
+			font-weight:bold;
+			font-family:Helvetica;
+			text-transform:uppercase;
+			color:#e1b1b1;
+		}
+	}
+}
+
 /* Content */
 
 a {

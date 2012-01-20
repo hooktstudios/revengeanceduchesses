@@ -10,5 +10,12 @@
  */
 ?>
 	</div>
+	<footer id="colophon" role="contentinfo">
+		<nav>
+			<?php wp_nav_menu(array(
+				'items_wrap' => '<ul id=\"%1$s\" class=\"%2$s\"><li><a href="/">Accueil</a></li>%3$s</ul>'
+				)); ?>
+		</nav>
+	</footer>
 </body>
 </html>

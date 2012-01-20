@@ -89,6 +89,19 @@ body {
   text-indent: -9999em;
   width: 401px; }
 
+footer {
+  padding: 65px 0 12px 65px; }
+  footer li {
+    display: block;
+    float: left;
+    margin-right: 32px; }
+    footer li a {
+      font-size: 11px;
+      font-weight: bold;
+      font-family: Helvetica;
+      text-transform: uppercase;
+      color: #e1b1b1; }
+
 /* Content */
 a {
   color: #6f4747;
