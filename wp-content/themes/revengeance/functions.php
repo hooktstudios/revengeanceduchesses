@@ -97,6 +97,35 @@ function twentyeleven_setup() {
 	// Add default posts and comments RSS feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
+	$labels = array(
+		'name' => _x('Duchesses', 'post type general name'),
+		'singular_name' => _x('Duchesses', 'post type singular name'),
+		'add_new' => _x('Ajouter', 'duchesse'),
+		'add_new_item' => __('Ajouter une duchesse'),
+		'edit_item' => __('Modifier'),
+		'new_item' => __('Nouvelle duchesse'),
+		'all_items' => __('Tous'),
+		'view_item' => __('Voir'),
+		'search_items' => __('Chercher'),
+		'not_found' =>  __('Aucune duchesse trouvée'),
+		'not_found_in_trash' => __('Aucune duchesse trouvée dans la corbeille'), 
+		'parent_item_colon' => '',
+		'menu_name' => 'Duchesses'
+	);
+	register_post_type('duchesse', array(
+		'public' => true,
+		'show_ui' => true,
+		'show_in_menu' =>true,
+		'has_archive' => true,
+		'menu_position' => 5,
+		'capability_type' => 'page',
+		'hierarchical' => false,
+		'rewrite' => true,
+		'query_var' => "quartier",
+		'supports' => array('title', 'author', 'page-attributes'),
+		'labels' => $labels,
+	));
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary', __( 'Primary Menu', 'twentyeleven' ) );
 
@@ -418,6 +447,56 @@ function twentyeleven_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name' => _x( 'Quartiers', 'taxonomy general name' ),
+		'singular_name' => _x( 'Quartier', 'taxonomy singular name' ),
+		'search_items' =>  __( 'Search Quartiers' ),
+		'all_items' => __( 'All Quartier' ),
+		'parent_item' => __( 'Parent Quartier' ),
+		'parent_item_colon' => __( 'Parent Quartier:' ),
+		'edit_item' => __( 'Edit Quartier' ), 
+		'update_item' => __( 'Update Quartier' ),
+		'add_new_item' => __( 'Add New Quartier' ),
+		'new_item_name' => __( 'New Quartier Name' ),
+		'menu_name' => __( 'Quartiers' ),
+	); 	
+
+	register_taxonomy('duch_quartier',array('duchesse'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'query_var' => true,
+		'capabilities' => array('assign_terms'),
+		'rewrite' => array( 'slug' => 'quartier' ),
+	));
+
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name' => _x( 'Éditions', 'taxonomy general name' ),
+		'singular_name' => _x( 'Édition', 'taxonomy singular name' ),
+		'search_items' =>  __( 'Search Éditions' ),
+		'all_items' => __( 'All Éditions' ),
+		'parent_item' => __( 'Parent Édition' ),
+		'parent_item_colon' => __( 'Parent Édition:' ),
+		'edit_item' => __( 'Edit Édition' ), 
+		'update_item' => __( 'Update Édition' ),
+		'add_new_item' => __( 'Add New Édition' ),
+		'new_item_name' => __( 'New Édition Name' ),
+		'menu_name' => __( 'Éditions' ),
+	); 	
+
+	register_taxonomy('duch_edition',array('duchesse'), array(
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'edition' ),
+	));
+	
+	#flush_rewrite_rules();
+
 }
 add_action( 'widgets_init', 'twentyeleven_widgets_init' );
 
