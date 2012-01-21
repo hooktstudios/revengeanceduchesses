@@ -62,27 +62,20 @@ body {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
-  z-index: -1; }
+  width: 100%; }
 
 #texture {
   background: url(img/pattern.png) 0 0 repeat; }
 
-.duchesse-infos {
-  font: 17px 'ColaborateThinRegular';
-  position: fixed;
-  left: 300px;
-  top: 600px;
-  text-transform: uppercase; }
-
-.duchesse-infos h1 {
-  font: 21px 'ColaborateBoldRegular'; }
-
-#felix-dumas .duchesse {
-  background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
+#content-wrap,
+#main-nav,
+.duchesse-infos,
+.arrow {
+  z-index: 1000; }
 
 #content-wrap {
-  padding: 145px 0 0 610px;
+  padding: 85px 0 60px 610px;
+  position: relative;
   width: 575px; }
 
 .content {
@@ -91,22 +84,14 @@ body {
   padding: 0 30px 60px;
   width: 330px; }
 
-#logo {
-  background: url(img/logo.png) 0 0 no-repeat;
-  height: 99px;
-  position: fixed;
-  top: 50px;
-  left: 64px;
-  text-indent: -9999em;
-  width: 401px; }
-
 #main-nav {
   padding-top: 53px;
   position: fixed;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  width: 100%; }
   #main-nav ul {
-    background: rgba(117, 0, 17, 0.4);
+    background: rgba(117, 0, 17, 0.75);
     overflow: hidden;
     padding: 0 0 0 65px; }
   #main-nav li, #main-nav a {
@@ -122,6 +107,51 @@ body {
     #main-nav a:hover {
       color: #fff; }
 
+#logo {
+  background: url(img/logo.png) 0 0 no-repeat;
+  height: 99px;
+  position: fixed;
+  top: 50px;
+  left: 64px;
+  text-indent: -9999em;
+  width: 401px; }
+
+/* Duchesses gallery */
+.duchesse-infos {
+  font: 17px 'ColaborateThinRegular';
+  position: fixed;
+  left: 300px;
+  top: 600px;
+  text-transform: uppercase; }
+  .duchesse-infos h1 {
+    font: 21px 'ColaborateBoldRegular'; }
+
+#felix-dumas .duchesse {
+  background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
+
+#catherine-genest .duchesse {
+  background: url(img/duchesses/catherine_genest.jpg) 0 0 no-repeat; }
+#catherine-genest .duchesse-infos {
+  left: 360px;
+  top: 575px; }
+
+.arrow {
+  background: rgba(117, 0, 17, 0.75) url(img/arrows.png) 8px center no-repeat;
+  display: block;
+  height: 100px;
+  margin-top: -50px;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  text-indent: -9999em;
+  width: 40px; }
+  .arrow.next {
+    background-position: -48px center;
+    left: auto;
+    right: 0; }
+  .arrow:hover {
+    background-color: rgba(117, 0, 17, 0.85); }
+
 /* Content */
 p {
   margin-bottom: 18px; }
@@ -136,11 +166,10 @@ a {
   margin: 0 -30px 22px;
   padding: 50px 30px 30px;
   position: relative; }
-
-.entry-header h1 {
-  color: #b69a9a;
-  font: 21px 'ColaborateThinRegular';
-  text-transform: uppercase; }
+  .entry-header h1 {
+    color: #b69a9a;
+    font: 21px 'ColaborateThinRegular';
+    text-transform: uppercase; }
 
 .entry-date {
   color: #cec6c6;

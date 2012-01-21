@@ -41,25 +41,20 @@ body {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: -1;
 }
 
 #texture { background: url(img/pattern.png) 0 0 repeat; }
 
-.duchesse-infos {
-	font: 17px 'ColaborateThinRegular';
-	position: fixed;
-	left: 300px;
-	top: 600px;
-	text-transform: uppercase;
+#content-wrap,
+#main-nav,
+.duchesse-infos,
+.arrow {
+	z-index: 1000;
 }
 
-.duchesse-infos h1 { font: 21px 'ColaborateBoldRegular'; }
-
-#felix-dumas .duchesse{ background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
-
 #content-wrap {
-	padding: 145px 0 0 610px;
+	padding: 85px 0 60px 610px;
+	position: relative;
 	width: 575px;
 }
 
@@ -68,6 +63,34 @@ body {
 	color: #6f4747;
 	padding: 0 30px 60px;
 	width: 330px;
+}
+
+#main-nav {
+	padding-top: 53px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+
+	ul {
+		background: rgba(117, 0, 17, 0.75);
+		overflow: hidden;
+		padding: 0 0 0 65px;
+	}
+
+	li, a { float: left; }
+
+	li { margin-right:32px; }
+
+	a {
+		color:#e1b1b1;
+		font: bold 11px Helvetica, Arial, sans-serif;
+		height: 30px;
+		line-height: 34px;
+		text-transform:uppercase;
+
+		&:hover { color: #fff; }
+	}
 }
 
 #logo {
@@ -80,35 +103,45 @@ body {
 	width: 401px;
 }
 
-#main-nav {
-	padding-top: 53px;
+/* Duchesses gallery */
+
+
+.duchesse-infos {
+	font: 17px 'ColaborateThinRegular';
 	position: fixed;
-	bottom: 0;
+	left: 300px;
+	top: 600px;
+	text-transform: uppercase;
+
+	h1 { font: 21px 'ColaborateBoldRegular'; }
+}
+
+#felix-dumas {
+	.duchesse { background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
+}
+#catherine-genest {
+	.duchesse { background: url(img/duchesses/catherine_genest.jpg) 0 0 no-repeat; }
+	.duchesse-infos { left: 360px; top: 575px;}
+}
+
+.arrow {
+	background: rgba(117, 0, 17, 0.75) url(img/arrows.png) 8px center no-repeat;
+	display: block;
+	height: 100px;
+	margin-top: -50px;
+	position: fixed;
+	top: 50%;
 	left: 0;
+	text-indent: -9999em;
+	width: 40px;
 
-	ul {
-		background: rgba(117, 0, 17, 0.4);
-		overflow: hidden;
-		padding: 0 0 0 65px;
+	&.next {
+		background-position: -48px center;
+		left: auto;
+		right: 0;
 	}
 
-	li, a {
-		float: left;
-	}
-
-	li {
-		margin-right:32px;
-	}
-
-	a {
-		color:#e1b1b1;
-		font: bold 11px Helvetica, Arial, sans-serif;
-		height: 30px;
-		line-height: 34px;
-		text-transform:uppercase;
-
-		&:hover { color: #fff; }
-	}
+	&:hover { background-color: rgba(117, 0, 17, 0.85); }
 }
 
 /* Content */
@@ -128,12 +161,12 @@ a {
 	margin: 0 -30px 22px;
 	padding: 50px 30px 30px;
 	position: relative;
-}
 
-.entry-header h1 {
-	color: #b69a9a;
-	font: 21px 'ColaborateThinRegular';
-	text-transform: uppercase;
+	h1 {
+		color: #b69a9a;
+		font: 21px 'ColaborateThinRegular';
+		text-transform: uppercase;
+	}
 }
 
 .entry-date {

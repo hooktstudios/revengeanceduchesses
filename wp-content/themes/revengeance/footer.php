@@ -22,6 +22,15 @@
 		</hgroup>
 		<div class="duchesse"></div>
 	</section>
+	<section id="catherine-genest" class="duchesse-wrap" style="display: none">
+		<hgroup class="duchesse-infos">
+			<h1>Catherine Genest</h1>
+			<h2>Duchesse de Montcalm</h2>
+		</hgroup>
+		<div class="duchesse"></div>
+	</section>
 	<div id="texture"></div>
+	<a href="#" class="arrow prev">Duchesse précédente</a>
+	<a href="#" class="arrow next">Duchesse suivante</a>
 </body>
 </html>
