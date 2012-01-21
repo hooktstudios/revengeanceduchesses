@@ -10,12 +10,18 @@
  */
 ?>
 	</div>
-	<footer id="colophon" role="contentinfo">
-		<nav>
-			<?php wp_nav_menu(array(
-				'items_wrap' => '<ul id=\"%1$s\" class=\"%2$s\"><li><a href="/">Accueil</a></li>%3$s</ul>'
-				)); ?>
-		</nav>
-	</footer>
+	<nav id="main-nav">
+		<?php wp_nav_menu(array(
+			'items_wrap' => '<ul id=\"%1$s\" class=\"%2$s\"><li><a href="/">Accueil</a></li>%3$s</ul>'
+			)); ?>
+	</nav>
+	<section id="felix-dumas" class="duchesse-wrap">
+		<hgroup class="duchesse-infos">
+			<h1>Félix Dumas</h1>
+			<h2>Duchesse du Petit Champlain</h2>
+		</hgroup>
+		<div class="duchesse"></div>
+	</section>
+	<div id="texture"></div>
 </body>
 </html>

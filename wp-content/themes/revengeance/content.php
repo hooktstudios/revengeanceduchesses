@@ -13,9 +13,7 @@
 			<h1><?php the_title(); ?></h1>
 
 			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class="entry-meta">
-				<?php twentyeleven_posted_on(); ?>
-			</div>
+				<time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')) ?>" pubdate><?php echo esc_attr(get_the_date()) ?></time>
 			<?php endif; ?>
 		</header>
 

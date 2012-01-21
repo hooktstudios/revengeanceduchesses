@@ -13,7 +13,7 @@
  */
 
 get_header(); ?>
-			<div id="content">
+			<div class="content">
 				<?php if ( have_posts() ) : ?>
 
 					<?php /* Start the Loop */ ?>

@@ -85,8 +85,6 @@ if (file_exists('REVISION'))
 </head>
 
 <body <?php body_class(); ?>>
-	<div id="duchesses"></div>
-	<div id="wrap"></div>
 	<div id="content-wrap">
 		<header id="header-wrap" role="banner">
 			<hgroup>

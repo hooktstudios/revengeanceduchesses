@@ -57,8 +57,7 @@ body {
   color: #fff;
   font: 12px Helvetica, Arial, sans-serif; }
 
-#duchesses, #wrap {
-  background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat;
+.duchesse, #texture {
   position: fixed;
   top: 0;
   left: 0;
@@ -66,43 +65,67 @@ body {
   width: 100%;
   z-index: -1; }
 
-#wrap {
-  background: url(img/pattern.png) 0 0 repeat;
-  z-index: -1; }
+#texture {
+  background: url(img/pattern.png) 0 0 repeat; }
+
+.duchesse-infos {
+  font: 17px 'ColaborateThinRegular';
+  position: fixed;
+  left: 300px;
+  top: 600px;
+  text-transform: uppercase; }
+
+.duchesse-infos h1 {
+  font: 21px 'ColaborateBoldRegular'; }
+
+#felix-dumas .duchesse {
+  background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
 
 #content-wrap {
   padding: 145px 0 0 610px;
   width: 575px; }
 
-#content {
+.content {
   background: #fff;
   color: #6f4747;
   padding: 0 30px 60px;
-  width: 385px; }
+  width: 330px; }
 
 #logo {
   background: url(img/logo.png) 0 0 no-repeat;
   height: 99px;
-  position: absolute;
+  position: fixed;
   top: 50px;
   left: 64px;
   text-indent: -9999em;
   width: 401px; }
 
-footer {
-  padding: 65px 0 12px 65px; }
-  footer li {
-    display: block;
-    float: left;
+#main-nav {
+  padding-top: 53px;
+  position: fixed;
+  bottom: 0;
+  left: 0; }
+  #main-nav ul {
+    background: rgba(117, 0, 17, 0.4);
+    overflow: hidden;
+    padding: 0 0 0 65px; }
+  #main-nav li, #main-nav a {
+    float: left; }
+  #main-nav li {
     margin-right: 32px; }
-    footer li a {
-      font-size: 11px;
-      font-weight: bold;
-      font-family: Helvetica;
-      text-transform: uppercase;
-      color: #e1b1b1; }
+  #main-nav a {
+    color: #e1b1b1;
+    font: bold 11px Helvetica, Arial, sans-serif;
+    height: 30px;
+    line-height: 34px;
+    text-transform: uppercase; }
+    #main-nav a:hover {
+      color: #fff; }
 
 /* Content */
+p {
+  margin-bottom: 18px; }
+
 a {
   color: #6f4747;
   font-weight: bold;
@@ -117,4 +140,12 @@ a {
 .entry-header h1 {
   color: #b69a9a;
   font: 21px 'ColaborateThinRegular';
+  text-transform: uppercase; }
+
+.entry-date {
+  color: #cec6c6;
+  font: 11px 'ColaborateBoldRegular';
+  position: absolute;
+  bottom: 8px;
+  right: 30px;
   text-transform: uppercase; }
