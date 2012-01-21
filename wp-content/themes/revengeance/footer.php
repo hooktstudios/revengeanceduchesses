@@ -30,7 +30,7 @@
 		<div class="duchesse"></div>
 	</section>
 	<div id="texture"></div>
-	<a href="#" class="arrow prev">Duchesse précédente</a>
-	<a href="#" class="arrow next">Duchesse suivante</a>
+	<a href="#" class="arrow prev" title="Duchesse précédente">Duchesse précédente</a>
+	<a href="#" class="arrow next" title="Duchesse suivante">Duchesse suivante</a>
 </body>
 </html>
