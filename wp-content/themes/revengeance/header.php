@@ -65,7 +65,7 @@ if (file_exists('REVISION'))
 <?php if ($production): ?>
 <script type="text/javascript" src="/min/revengeance_js-<?php echo $revision ?>.js"></script>
 <?php else: ?>
-<script type="text/javascript" src="/wp-content/themes/revengeance/js/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="/wp-content/themes/revengeance/js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="/wp-content/themes/revengeance/js/default.js"></script>
 <?php endif ?>
 <?php
