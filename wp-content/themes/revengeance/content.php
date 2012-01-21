@@ -56,3 +56,17 @@
 			<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- #entry-meta -->
 	</article><!-- #post-<?php the_ID(); ?> -->
+</div>
+<nav id="duchesses-nav">
+	<h2>Vos <br>duchesses</h2>
+	<ul>
+		<li><a href="#">Montcalm</a></li>
+		<li><a href="#">Limoilou</a></li>
+		<li><a href="#">St-Jean-Baptise</a></li>
+		<li><a href="#">Vieux-Québec</a></li>
+		<li><a href="#">St-Sacrement</a></li>
+		<li><a href="#">St-Sauveur</a></li>
+		<li><a href="#">Vieux-Port</a></li>
+		<li><a href="#">Petit Champlain</a></li>
+	</ul>
+</nav>
