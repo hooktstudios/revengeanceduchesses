@@ -24,6 +24,9 @@
 			<?php if ( comments_open() ) : ?>
 			<?php comments_popup_link( '0', '1','%', 'comment-link'); ?>
 			<?php endif;?>
+			<?php //@todo : make this dynamic ?>
+			<a href="#" class="article-nav next">‹ Article suivant</a>
+			<a href="#" class="article-nav prev">Article précédent ›</a>
 		</footer>
 	</article>
 </div>

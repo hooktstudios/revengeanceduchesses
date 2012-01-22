@@ -181,6 +181,20 @@ a {
   text-shadow: 0 1px rgba(0, 0, 0, 0.55);
   width: 34px; }
 
+.article-nav {
+  color: #e0c6c6;
+  display: block;
+  font: normal 11px/28px "ColaborateBoldRegular";
+  height: 28px;
+  position: absolute;
+  bottom: -28px;
+  left: -30px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  text-transform: uppercase; }
+  .article-nav.prev {
+    left: auto;
+    right: -30px; }
+
 /* Duchesses gallery */
 .duchesse-infos {
   font: 17px 'ColaborateThinRegular';
