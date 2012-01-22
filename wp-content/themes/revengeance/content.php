@@ -11,7 +11,6 @@
 	<article>
 		<header class="entry-header">
 			<h1><?php the_title(); ?></h1>
-
 			<?php if ( 'post' == get_post_type() ) : ?>
 				<time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')) ?>" pubdate><?php echo esc_attr(get_the_date()) ?></time>
 			<?php endif; ?>
@@ -29,17 +28,3 @@
 			<a href="#" class="article-nav prev">Article précédent ›</a>
 		</footer>
 	</article>
-</div>
-<nav id="duchesses-nav">
-	<h2>Vos <br>duchesses</h2>
-	<ul>
-		<li><a href="#">Montcalm</a></li>
-		<li><a href="#">Limoilou</a></li>
-		<li><a href="#">St-Jean-Baptise</a></li>
-		<li><a href="#">Vieux-Québec</a></li>
-		<li><a href="#">St-Sacrement</a></li>
-		<li><a href="#">St-Sauveur</a></li>
-		<li><a href="#">Vieux-Port</a></li>
-		<li><a href="#">Petit Champlain</a></li>
-	</ul>
-</nav>

@@ -9,6 +9,20 @@
  * @since Twenty Eleven 1.0
  */
 ?>
+	<nav id="duchesses-nav">
+		<h2>Vos <br>duchesses</h2>
+		<ul>
+			<li><a href="#">Montcalm</a></li>
+			<li><a href="#">Limoilou</a></li>
+			<li><a href="#">St-Jean-Baptise</a></li>
+			<li><a href="#">Vieux-Québec</a></li>
+			<li><a href="#">St-Sacrement</a></li>
+			<li><a href="#">St-Sauveur</a></li>
+			<li><a href="#">Vieux-Port</a></li>
+			<li><a href="#">Petit Champlain</a></li>
+		</ul>
+	</nav>
+	</div>
 	<nav id="main-nav">
 		<?php wp_nav_menu(array(
 			'items_wrap' => '<ul id=\"%1$s\" class=\"%2$s\"><li><a href="/">Accueil</a></li>%3$s</ul>'

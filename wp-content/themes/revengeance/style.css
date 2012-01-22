@@ -170,6 +170,19 @@ a {
   right: 30px;
   text-transform: uppercase; }
 
+.entry-content h2 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 12px; }
+.entry-content h3 {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 12px; }
+.entry-content h4 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 12px; }
+
 .comment-link {
   background: url(img/comment.png) 0 0 no-repeat;
   color: #fff;
