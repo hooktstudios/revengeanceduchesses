@@ -57,6 +57,9 @@ body {
   color: #fff;
   font: 12px Helvetica, Arial, sans-serif; }
 
+.assistive-text {
+  display: none; }
+
 .duchesse, #texture {
   position: fixed;
   top: 0;
@@ -194,7 +197,7 @@ a {
   text-shadow: 0 1px rgba(0, 0, 0, 0.55);
   width: 34px; }
 
-.article-nav {
+#article-nav a {
   color: #e0c6c6;
   display: block;
   font: normal 11px/28px "ColaborateBoldRegular";
@@ -204,9 +207,10 @@ a {
   left: -30px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   text-transform: uppercase; }
-  .article-nav.prev {
-    left: auto;
-    right: -30px; }
+
+#article-nav .nav-previous a {
+  left: auto;
+  right: -30px; }
 
 /* Duchesses gallery */
 .duchesse-infos {

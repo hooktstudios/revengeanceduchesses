@@ -8,11 +8,26 @@
  */
 ?>
 
+<div class="content">
 	<article>
 		<header class="entry-header">
 			<h1><?php the_title(); ?></h1>
+			<?php if ( 'post' == get_post_type() ) : ?>
+				<time class="entry-date" datetime="<?php echo esc_attr(get_the_date('c')) ?>" pubdate><?php echo esc_attr(get_the_date()) ?></time>
+			<?php endif; ?>
 		</header>
 		<div class="entry-content">
 			<?php the_content(); ?>
 		</div>
+		<footer class="entry-meta">
+			<?php if ( comments_open() ) : ?>
+			<?php comments_popup_link( '0', '1','%', 'comment-link'); ?>
+			<?php endif;?>
+			<nav id="article-nav">
+				<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
+				<span class="nav-previous"><?php previous_post_link( '%link', __( 'Article précédent ›', 'twentyeleven article-nav next' ) ); ?></span>
+				<span class="nav-next"><?php next_post_link( '%link', __( '‹ Article suivant', 'twentyeleven article-nav next' ) ); ?></span>
+			</nav><!-- #nav-single -->
+		</footer>
 	</article>
+</div>

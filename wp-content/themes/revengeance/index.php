@@ -13,11 +13,10 @@
  */
 
 get_header(); ?>
-			<div class="content">
+
 				<?php if ( have_posts() ) : ?>
 					<?php the_post(); ?>
-					<?php get_template_part( 'content', get_post_format() ); ?>
+					<?php get_template_part( 'content-single', get_post_format() ); ?>
 				<?php endif; ?>
-			</div>
 
 <?php get_footer(); ?>
