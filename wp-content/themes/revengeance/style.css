@@ -82,7 +82,13 @@ body {
   background: #fff;
   color: #6f4747;
   padding: 0 30px 60px;
+  position: relative;
   width: 330px; }
+  .content footer {
+    padding-bottom: 7px;
+    position: absolute;
+    bottom: 0;
+    width: 330px; }
 
 #main-nav {
   padding-top: 53px;
@@ -163,6 +169,17 @@ a {
   bottom: 8px;
   right: 30px;
   text-transform: uppercase; }
+
+.comment-link {
+  background: url(img/comment.png) 0 0 no-repeat;
+  color: #fff;
+  float: right;
+  font-size: 14px;
+  height: 24px;
+  padding-top: 3px;
+  text-align: center;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.55);
+  width: 34px; }
 
 /* Duchesses gallery */
 .duchesse-infos {
