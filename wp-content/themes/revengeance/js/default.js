@@ -6,14 +6,16 @@ $(function(){
 
 	function arrow_click(e){
 		e.preventDefault();
-		var cur_duchesse = duchesses.filter(':visible') , $this = $(this);
-		var duchesse_to_show = get_duchesse_to_show.apply($this, cur_duchesse);
+		var cur_duchesse = duchesses.filter(':visible');
+		var $this = $(this);
+		var duchesse_to_show = get_duchesse_to_show.call($this, cur_duchesse);
 		cur_duchesse.fadeOut();
 		duchesse_to_show.fadeIn();
 	}
 
 	function get_duchesse_to_show(cur) {
-		var $cur = $(cur), next_duchesse;
+		var $cur = $(cur);
+		var next_duchesse;
 
 		if(this.hasClass('next')) {
 			next_duchesse = $cur.next('.duchesse-wrap');
