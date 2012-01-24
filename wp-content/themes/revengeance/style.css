@@ -139,12 +139,16 @@ body {
     text-transform: uppercase; }
   #duchesses-nav a {
     color: #fed6dc;
-    display: inline-block;
+    display: block;
     font: 16px 'ColaborateThinRegular';
     padding: 9px 0;
     text-transform: uppercase; }
     #duchesses-nav a:hover {
       color: #f59fab; }
+    #duchesses-nav a.photos {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 0 0 12px; }
 
 /* Content */
 p {

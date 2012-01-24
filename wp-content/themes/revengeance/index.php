@@ -14,9 +14,11 @@
 
 get_header(); ?>
 
-				<?php if ( have_posts() ) : ?>
-					<?php the_post(); ?>
-					<?php get_template_part( 'content-single', get_post_format() ); ?>
-				<?php endif; ?>
+	<?php query_posts('author=1,2'); ?>
+
+	<?php if ( have_posts() ) : ?>
+		<?php the_post(); ?>
+		<?php get_template_part( 'content-single', get_post_format() ); ?>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
