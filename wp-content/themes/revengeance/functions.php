@@ -464,7 +464,7 @@ function twentyeleven_widgets_init() {
 	); 	
 
 	register_taxonomy('duch_quartier',array('duchesse'), array(
-		'hierarchical' => true,
+		'hierarchical' => false,
 		'labels' => $labels,
 		'show_ui' => true,
 		'query_var' => true,
@@ -488,7 +488,7 @@ function twentyeleven_widgets_init() {
 	); 	
 
 	register_taxonomy('duch_edition',array('duchesse'), array(
-		'hierarchical' => true,
+		'hierarchical' => false,
 		'labels' => $labels,
 		'show_ui' => true,
 		'query_var' => true,
