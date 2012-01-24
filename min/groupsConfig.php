@@ -12,14 +12,14 @@
  **/
 
 return array(
-     'revengeance_js' => array(
-		'//wp-content/themes/revengeance/js/jquery-1.7.min.js', 
-		'//wp-content/themes/revengeance/js/default.js', 
+	'revengeance_js' => array(
+		'//wp-content/themes/revengeance/js/jquery-1.7.1.min.js', 
+		'//wp-content/themes/revengeance/js/default.js',
 	),
-    'revengeance_css' => array(
+	'revengeance_css' => array(
 		'//wp-content/themes/revengeance/style.css', 
 	),
-    'revengeance_print' => array(
+	'revengeance_print' => array(
 		'//wp-content/themes/revengeance/print.css', 
 	),
 );
