@@ -7,6 +7,7 @@ set :rvm_type, :user
 
 set :capistrano_extensions, [:multistage]
 set :scm, :git
+set :git_enable_submodules, 1
 set :deploy_via, :remote_cache
 set :use_sudo, false
 ssh_options[:forward_agent] = true

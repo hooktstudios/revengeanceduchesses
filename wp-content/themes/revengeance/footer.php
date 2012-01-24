@@ -110,5 +110,6 @@
 		<a href="#" class="arrow prev" title="Duchesse précédente">Duchesse précédente</a>
 		<a href="#" class="arrow next" title="Duchesse suivante">Duchesse suivante</a>
 	<?php endif ?>
+	<?php wp_footer(); ?>
 </body>
 </html>

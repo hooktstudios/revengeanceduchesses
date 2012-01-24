@@ -1,5 +1,12 @@
 # Revengeance des Duchesses blog
 
+## Init submodules
+
+There is a WP plugin included as a git submodules that you must init :
+
+    git submodule init
+    git submodule update
+
 ## Wordpress configuration
 
 > cp wp-config.php.template wp-config.php
