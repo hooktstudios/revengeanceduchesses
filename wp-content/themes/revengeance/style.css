@@ -74,7 +74,7 @@ body {
 #main-nav,
 .duchesse-infos,
 .arrow {
-  z-index: 1000; }
+  z-index: 50; }
 
 #content-wrap {
   padding: 85px 0 60px 610px;

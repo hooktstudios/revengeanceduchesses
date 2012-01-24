@@ -122,7 +122,7 @@ function twentyeleven_setup() {
 		'hierarchical' => false,
 		'rewrite' => true,
 		'query_var' => "quartier",
-		'supports' => array('title', 'author', 'page-attributes'),
+		'supports' => array('title', 'author', 'page-attributes', 'editor'),
 		'labels' => $labels,
 	));
 

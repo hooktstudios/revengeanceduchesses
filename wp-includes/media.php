@@ -784,7 +784,7 @@ function gallery_shortcode($attr) {
 		'itemtag'    => 'dl',
 		'icontag'    => 'dt',
 		'captiontag' => 'dd',
-		'columns'    => 3,
+		'columns'    => 2,
 		'size'       => 'thumbnail',
 		'include'    => '',
 		'exclude'    => ''
