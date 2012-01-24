@@ -17,7 +17,10 @@
 			<?php endif; ?>
 		</header>
 		<div class="entry-content">
-			 <?php echo do_shortcode('[gallery columns="2"]'); ?>
+			<?php 
+			// You should configure the LightBox plugin to 2 columns in the default settings
+			echo do_shortcode('[gallery]'); 
+			?>
 		</div>
 	</article>
 </div>
