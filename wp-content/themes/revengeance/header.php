@@ -62,12 +62,6 @@ if (file_exists('REVISION'))
 <!--[if lt IE 9]>
 <script src="/wp-content/themes/revengeance/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-<?php if ($production): ?>
-<script type="text/javascript" src="/min/revengeance_js-<?php echo $revision ?>.js"></script>
-<?php else: ?>
-<script type="text/javascript" src="/wp-content/themes/revengeance/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="/wp-content/themes/revengeance/js/default.js"></script>
-<?php endif ?>
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
@@ -82,6 +76,11 @@ if (file_exists('REVISION'))
 	 */
 	wp_head();
 ?>
+<?php if ($production): ?>
+<script type="text/javascript" src="/min/revengeance_js-<?php echo $revision ?>.js"></script>
+<?php else: ?>
+<script type="text/javascript" src="/wp-content/themes/revengeance/js/default.js"></script>
+<?php endif ?>
 </head>
 
 <body <?php body_class(); ?>>

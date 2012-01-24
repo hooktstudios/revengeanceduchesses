@@ -1,3 +1,4 @@
+$ = jQuery;
 $(function(){
 	var duchesses = $('.duchesse-wrap');
 	var arrows = $('.arrow');

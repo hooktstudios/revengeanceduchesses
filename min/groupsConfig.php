@@ -13,7 +13,6 @@
 
 return array(
 	'revengeance_js' => array(
-		'//wp-content/themes/revengeance/js/jquery-1.7.1.min.js', 
 		'//wp-content/themes/revengeance/js/default.js',
 	),
 	'revengeance_css' => array(
