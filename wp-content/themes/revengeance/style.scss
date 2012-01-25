@@ -253,13 +253,15 @@ h4 { font-size:12px; }
 	h1 { font: 21px 'ColaborateBoldRegular'; }
 }
 
-#felix-dumas {
-	.duchesse { background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
-}
-#catherine-genest {
-	.duchesse { background: url(img/duchesses/catherine_genest.jpg) 0 0 no-repeat; }
-	.duchesse-infos { left: 360px; top: 575px;}
-}
+.duchesse { background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }
+
+#caroline-decoste .duchesse { background: url(img/duchesses/caroline_decoste.jpg) 0 0 no-repeat; }
+#catherine-genest .duchesse { background: url(img/duchesses/catherine_genest.jpg) 0 0 no-repeat; }
+#emilie-de-launiere .duchesse { background: url(img/duchesses/emilie_de_launiere.jpg) 0 0 no-repeat; }
+#erika-soucy .duchesse { background: url(img/duchesses/erika_soucy.jpg) 0 0 no-repeat; }
+#marcelle-maheu .duchesse { background: url(img/duchesses/marcelle_maheu.jpg) 0 0 no-repeat; }
+#marie-chantal-chretien .duchesse { background: url(img/duchesses/marie_chantal_chretien.jpg) 0 0 no-repeat; }
+#zoe-forest-paradis .duchesse { background: url(img/duchesses/zoe_forest_paradis.jpg) 0 0 no-repeat; }
 
 .arrow {
 	background: rgba(117, 0, 17, 0.75) url(img/arrows.png) 8px center no-repeat;
