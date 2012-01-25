@@ -64,6 +64,7 @@
   		<hgroup class="duchesse-infos">
   			<h1><?php echo $duchesses->post->post_title ?></h1>
   			<h2><?php echo $quartier->name ?></h2>
+  			<a class="vote">Voter pour moi</a>
   		</hgroup>
   		<div class="duchesse"></div>
   	</section>
