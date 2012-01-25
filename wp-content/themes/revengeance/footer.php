@@ -70,9 +70,9 @@
 			$display = '';
 		}
 		?>
-		<?php 
+		<?php
 		// Inclued hidden if current page is not a duchesse page, or if its the duchesse
-		if (!$is_duchesse || $display == ''): 
+		if (!$is_duchesse || $display == ''):
 		?>
 			<?php
 			// Get duchesse quartier
@@ -82,7 +82,7 @@
 				<hgroup class="duchesse-infos">
 					<h1><?php echo $duchesses->post->post_title ?></h1>
 					<h2><?php echo $quartier->name ?></h2>
-					<?php if (REVENGEANCE_VOTE && $current_author == $duchesses->post->post_author): ?>		
+					<?php if (REVENGEANCE_VOTE && $current_author == $duchesses->post->post_author): ?>
 						<a class="vote">Voter pour moi</a>
 					<?php endif ?>
 				</hgroup>
