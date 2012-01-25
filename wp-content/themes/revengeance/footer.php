@@ -42,8 +42,8 @@
 				<li>
 					<a href="<?php echo get_author_posts_url($duchesses->post->post_author) ?>"><?php echo $quartier->name ?></a>
 					<?php if (REVENGEANCE_DUCH_GALLERY && $current_author == $duchesses->post->post_author): ?>
-					  <?php $is_duchesse = true; ?>
-					  <a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
+						<?php $is_duchesse = true; ?>
+						<a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
 					<?php endif ?>
 				</li>
 			<?php endwhile; ?>
@@ -76,16 +76,16 @@
 			// Get duchesse quartier
 			$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));
 			?>
-  		<section id="<?php echo $duchesses->post->post_name ?>" class="duchesse-wrap" style="<?php echo $display ?>">
-	  		<hgroup class="duchesse-infos">
-	  			<h1><?php echo $duchesses->post->post_title ?></h1>
-	  			<h2><?php echo $quartier->name ?></h2>
+			<section id="<?php echo $duchesses->post->post_name ?>" class="duchesse-wrap" style="<?php echo $display ?>">
+				<hgroup class="duchesse-infos">
+					<h1><?php echo $duchesses->post->post_title ?></h1>
+					<h2><?php echo $quartier->name ?></h2>
 					<?php if (REVENGEANCE_VOTE && $current_author == $duchesses->post->post_author): ?>		
-	  				<a class="vote">Voter pour moi</a>
+						<a class="vote">Voter pour moi</a>
 					<?php endif ?>
-	  		</hgroup>
-	  		<div class="duchesse"></div>
-	  	</section>
+				</hgroup>
+				<div class="duchesse"></div>
+			</section>
 		<?php endif ?>
 	<?php endwhile; ?>
 	<div id="texture"></div>
