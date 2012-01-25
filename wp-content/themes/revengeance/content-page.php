@@ -8,7 +8,7 @@
  */
 ?>
 
-	<article>
+	<article id="page-<?php echo $post->post_name ?>">
 		<header class="entry-header">
 			<h1><?php the_title(); ?></h1>
 		</header>

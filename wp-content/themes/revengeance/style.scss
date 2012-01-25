@@ -73,6 +73,11 @@ body {
 	}
 }
 
+#page-commanditaire .entry-content,
+#page-partenaires .entry-content{
+	margin-left: -6px;
+}
+
 #main-nav {
 	padding-top: 53px;
 	position: fixed;
