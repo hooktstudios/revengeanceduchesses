@@ -678,3 +678,21 @@ function allow_contributor_uploads() {
         $contributor = get_role('contributor');
         $contributor->add_cap('upload_files');
 }
+
+function get_prev_post_by_author($link="&laquo; %link", $title="%title") {
+        global $wpdb, $post;
+        $prev = $wpdb->get_row($wpdb->prepare("SELECT ID, post_title FROM $wpdb->posts WHERE post_type='post' AND post_status='publish' AND post_author='".$post->post_author."' AND post_date < '".$post->post_date."' ORDER BY post_date DESC LIMIT 1;"));
+        if($prev) {
+                $title = preg_replace('/%title/',$prev->post_title, $title);
+                echo preg_replace('/%link/', '<a href="'.get_permalink($prev->ID).'" rel="prev">'.$title.'</a>', $link);
+        }
+}                               
+
+function get_next_post_by_author($link="%link &raquo;", $title="%title") {
+        global $wpdb, $post;
+        $next = $wpdb->get_row($wpdb->prepare("SELECT ID, post_title FROM $wpdb->posts WHERE post_type='post' AND post_status='publish' AND post_author='".$post->post_author."' AND post_date > '".$post->post_date."' ORDER BY post_date ASC LIMIT 1;"));
+        if($next) {
+                $title = preg_replace('/%title/',$next->post_title, $title);
+                echo preg_replace('/%link/', '<a href="'.get_permalink($next->ID).'" rel="next">'.$title.'</a>', $link);
+        }
+}

@@ -30,8 +30,8 @@
 			<?php endif;?>
 			<nav id="article-nav">
 				<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-				<span class="nav-previous"><?php previous_post_link( '%link', __( 'Article précédent ›', 'twentyeleven article-nav next' ) ); ?></span>
-				<span class="nav-next"><?php next_post_link( '%link', __( '‹ Article suivant', 'twentyeleven article-nav next' ) ); ?></span>
+				<span class="nav-previous"><?php echo get_prev_post_by_author( '%link', __( 'Article précédent ›', 'twentyeleven article-nav next' ) ); ?></span>
+				<span class="nav-next"><?php echo get_next_post_by_author( '%link', __( '‹ Article suivant', 'twentyeleven article-nav next' ) ); ?></
 			</nav><!-- #nav-single -->
 		</footer>
 	</article>
