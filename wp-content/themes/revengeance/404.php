@@ -9,40 +9,30 @@
 
 get_header(); ?>
 
-	<div id="primary">
-		<div id="content" role="main">
+<div class="content">
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<header class="entry-header">
+			<h1 class="entry-title">Erreur 404 - Page non trouvée</h1>
+		</header><!-- .entry-header -->
+		<div class="entry-content">
+			<p>Désolé, la page demandée est introuvable sur notre site.</p> 
+			<p>Il se peut qu'elle ait été supprimée, que son nom ait changé ou qu'elle soit temporairement indisponible.</p>
+			<p>Veuillez essayer ce qui suit :</p>
+			<ul>
+				<li>Si vous avez tapé l'adresse de la page dans la barre d'adresses, vérifiez l'orthographe.</li>
+				<li>Essayez d'accéder à la page désirée par la <a href="/">page d'accueil</a> ou de la barre de navigation dans le bas.</li>
+			</ul>
+			<p>Pour rapporter un problème, <a href="/contact">communiquez avec nous</a>.</p>
+		</div><!-- .entry-content -->
+	</article><!-- #post-<?php the_ID(); ?> -->
+</div>
 
-			<article id="post-0" class="post error404 not-found">
-				<header class="entry-header">
-					<h1 class="entry-title"><?php _e( 'This is somewhat embarrassing, isn&rsquo;t it?', 'twentyeleven' ); ?></h1>
-				</header>
-
-				<div class="entry-content">
-					<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.', 'twentyeleven' ); ?></p>
-
-					<?php get_search_form(); ?>
-
-					<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 10 ), array( 'widget_id' => '404' ) ); ?>
-
-					<div class="widget">
-						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'twentyeleven' ); ?></h2>
-						<ul>
-						<?php wp_list_categories( array( 'orderby' => 'count', 'order' => 'DESC', 'show_count' => 1, 'title_li' => '', 'number' => 10 ) ); ?>
-						</ul>
-					</div>
-
-					<?php
-					/* translators: %1$s: smilie */
-					$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'twentyeleven' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', array('count' => 0 , 'dropdown' => 1 ), array( 'after_title' => '</h2>'.$archive_content ) );
-					?>
-
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
-
-				</div><!-- .entry-content -->
-			</article><!-- #post-0 -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+<script type="text/javascript">
+	if (typeof _gaq != "undefined") 
+	{
+		_gaq.push(['_trackPageview', '/404&page=' + document.location.pathname +
+document.location.search + decodeURIComponent('%26') + 'from=' + document.referrer]);
+	};
+</script>
 
 <?php get_footer(); ?>
