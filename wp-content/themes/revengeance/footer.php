@@ -35,7 +35,7 @@
 				?>
 				<li>
 					<a href="<?php echo get_author_posts_url($duchesses->post->post_author) ?>"><?php echo $quartier->name ?></a>
-					<?php if ($main_post->post_author == $duchesses->post->post_author): ?>
+					<?php if (REVENGEANCE_DUCH_GALLERY && $main_post->post_author == $duchesses->post->post_author): ?>
 					  <?php $is_duchesse = true; ?>
 					  <a class="photos" href="<?php the_permalink() ?>">Ses photos11</a>
 					<?php endif ?>
@@ -64,7 +64,9 @@
   		<hgroup class="duchesse-infos">
   			<h1><?php echo $duchesses->post->post_title ?></h1>
   			<h2><?php echo $quartier->name ?></h2>
-  			<a class="vote">Voter pour moi</a>
+				<?php if (REVENGEANCE_VOTE): ?>		
+  				<a class="vote">Voter pour moi</a>
+				<?php endif ?>
   		</hgroup>
   		<div class="duchesse"></div>
   	</section>

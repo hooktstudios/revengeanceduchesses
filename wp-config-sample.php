@@ -33,6 +33,12 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
+/** Enabled vote feature */
+define('REVENGEANCE_VOTE', false);
+
+/** Enabled gallery feature */
+define('REVENGEANCE_DUCH_GALLERY', false);
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
