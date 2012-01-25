@@ -38,11 +38,14 @@
 			<?php while ( $duchesses->have_posts() ) : $duchesses->the_post(); ?>
 				<?php
 				$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));
+				// Any duchesse post
+				if ($current_author == $duchesses->post->post_author) {
+					$is_duchesse = true;
+				}
 				?>
 				<li>
 					<a href="<?php echo get_author_posts_url($duchesses->post->post_author) ?>"><?php echo $quartier->name ?></a>
 					<?php if (REVENGEANCE_DUCH_GALLERY && $current_author == $duchesses->post->post_author): ?>
-						<?php $is_duchesse = true; ?>
 						<a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
 					<?php endif ?>
 				</li>
