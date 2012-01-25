@@ -30,9 +30,28 @@ if (file_exists('REVISION'))
 <!--<![endif]-->
 <head>
 <?php if (REVENGEANCE_FB_COMMENTS): ?>
-<meta property="fb:app_id" content="<?php echo REVENGEANCE_FB_APP_ID ?>"/>
 <?php endif ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta property="fb:app_id" content="<?php echo REVENGEANCE_FB_APP_ID ?>"/>
+<?php
+// Set a pic for Facebook & others!
+$args = array(
+	'post_type' => 'attachment',
+	'numberposts' => -1,
+	'post_status' => null,
+	'post_parent' => $post->ID
+);
+$attachments = get_posts( $args );
+?>
+<?php if (!empty($attachments)): ?>
+	<?php 
+	$attachment = array_pop($attachments);
+	$attachment_src = wp_get_attachment_image_src($attachment->ID, 'thumbnail');
+	?>
+	<meta rel="image_src" content="<?php echo $attachment_src[0] ?>"/>
+	<meta property="og:image" content="<?php echo $attachment_src[0] ?>" />
+<?php endif ?>
+<meta name="medium" content="blog" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
 	/*
