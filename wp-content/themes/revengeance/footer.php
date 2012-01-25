@@ -48,8 +48,8 @@
 				</li>
 			<?php endwhile; ?>
 		</ul>
-		<a href="http://fr-fr.facebook.com/pages/Revengeance-des-duchesses/185712408115123" class="social fb" title="Suivez-nous sur Facebook">Facebook</a>
-		<a href="https://twitter.com/#!/LesDuchessesQC" class="social tw" title="Suivez-nous sur Twitter">Twitter</a>
+		<a target="_blank" href="http://fr-fr.facebook.com/pages/Revengeance-des-duchesses/185712408115123" class="social fb" title="Suivez-nous sur Facebook">Facebook</a>
+		<a target="_blank" href="https://twitter.com/#!/LesDuchessesQC" class="social tw" title="Suivez-nous sur Twitter">Twitter</a>
 	</nav>
 	</div>
 	<nav id="main-nav">
