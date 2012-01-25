@@ -12,7 +12,13 @@
 	<nav id="duchesses-nav">
 		<h2>Vos <br>duchesses</h2>
 		<?php
-		$main_post = $post;
+		if($wp_query->is_author()){
+			$current_author = $wp_query->get('author');
+		}
+		else
+		{
+			$current_author = $wp_query->post->post_author;
+		}
 		$is_duchesse = false;
 		wp_reset_query();
 		$options = array(
@@ -35,9 +41,9 @@
 				?>
 				<li>
 					<a href="<?php echo get_author_posts_url($duchesses->post->post_author) ?>"><?php echo $quartier->name ?></a>
-					<?php if (REVENGEANCE_DUCH_GALLERY && $main_post->post_author == $duchesses->post->post_author): ?>
+					<?php if (REVENGEANCE_DUCH_GALLERY && $current_author == $duchesses->post->post_author): ?>
 					  <?php $is_duchesse = true; ?>
-					  <a class="photos" href="<?php the_permalink() ?>">Ses photos11</a>
+					  <a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
 					<?php endif ?>
 				</li>
 			<?php endwhile; ?>
@@ -57,22 +63,35 @@
 	?>
 	<?php while ( $duchesses->have_posts() ) : $duchesses->the_post(); $i++; ?>
 		<?php
-		$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));
-		$display = ($main_post->post_author == $duchesses->post->post_author || !(!$is_duchesse && $i==$the_chosen_one)) ? 'display:none;' : '';
+		$display = 'display:none;';
+		if($current_author == $duchesses->post->post_author || (!$is_duchesse && $i==$the_chosen_one)){
+			$display = '';
+		}
 		?>
-  	<section id="<?php echo $duchesses->post->post_name ?>" class="duchesse-wrap" style="<?php echo $display ?>">
-  		<hgroup class="duchesse-infos">
-  			<h1><?php echo $duchesses->post->post_title ?></h1>
-  			<h2><?php echo $quartier->name ?></h2>
-				<?php if (REVENGEANCE_VOTE): ?>		
-  				<a class="vote">Voter pour moi</a>
-				<?php endif ?>
-  		</hgroup>
-  		<div class="duchesse"></div>
-  	</section>
+		<?php 
+		// Inclued hidden if current page is not a duchesse page, or if its the duchesse
+		if (!$is_duchesse || $display == ''): 
+		?>
+			<?php
+			// Get duchesse quartier
+			$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));
+			?>
+  		<section id="<?php echo $duchesses->post->post_name ?>" class="duchesse-wrap" style="<?php echo $display ?>">
+	  		<hgroup class="duchesse-infos">
+	  			<h1><?php echo $duchesses->post->post_title ?></h1>
+	  			<h2><?php echo $quartier->name ?></h2>
+					<?php if (REVENGEANCE_VOTE && $current_author == $duchesses->post->post_author): ?>		
+	  				<a class="vote">Voter pour moi</a>
+					<?php endif ?>
+	  		</hgroup>
+	  		<div class="duchesse"></div>
+	  	</section>
+		<?php endif ?>
 	<?php endwhile; ?>
 	<div id="texture"></div>
-	<a href="#" class="arrow prev" title="Duchesse précédente">Duchesse précédente</a>
-	<a href="#" class="arrow next" title="Duchesse suivante">Duchesse suivante</a>
+	<?php if (!$is_duchesse): ?>
+		<a href="#" class="arrow prev" title="Duchesse précédente">Duchesse précédente</a>
+		<a href="#" class="arrow next" title="Duchesse suivante">Duchesse suivante</a>
+	<?php endif ?>
 </body>
 </html>
