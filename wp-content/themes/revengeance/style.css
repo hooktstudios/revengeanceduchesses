@@ -97,6 +97,7 @@ body {
   left: 0;
   width: 100%; }
   #main-nav ul {
+    background: #84081a;
     background: rgba(117, 0, 17, 0.75);
     list-style-type: none;
     margin-bottom: 0;
@@ -288,6 +289,7 @@ h4 {
   background: url(img/duchesses/zoe_forest_paradis.jpg) 0 0 no-repeat; }
 
 .arrow {
+  background: #84081a url(img/arrows.png) 8px center no-repeat;
   background: rgba(117, 0, 17, 0.75) url(img/arrows.png) 8px center no-repeat;
   display: block;
   height: 100px;
