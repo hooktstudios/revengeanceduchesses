@@ -19,11 +19,13 @@
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<div class="comments">
+				<?php if (REVENGEANCE_FB_COMMENTS && comments_open()) : ?>
 				<div class="fb-comments" data-href="<?php echo the_permalink() ?>" data-num-posts="4" data-width="330"></div>
+				<?php endif;?>
 			</div>
 		</div>
 		<footer class="entry-meta">
-			<?php if ( comments_open() ) : ?>
+			<?php if (REVENGEANCE_FB_COMMENTS && comments_open() ) : ?>
 			<a href="#" class="comment-link"><fb:comments-count href="<?php echo the_permalink() ?>"></fb:comments-count></a>
 			<?php endif;?>
 			<nav id="article-nav">

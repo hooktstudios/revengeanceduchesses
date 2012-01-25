@@ -39,6 +39,12 @@ define('REVENGEANCE_VOTE', false);
 /** Enabled gallery feature */
 define('REVENGEANCE_DUCH_GALLERY', false);
 
+/** Facebook App id to control comments */
+define('REVENGEANCE_FB_APP_ID', '207205489374897');
+
+/** Enabled facebook comments feature */
+define('REVENGEANCE_FB_COMMENTS', true);
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
