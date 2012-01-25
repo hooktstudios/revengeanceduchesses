@@ -7,6 +7,8 @@ $(function(){
 
 	function arrow_click(e){
 		e.preventDefault();
+		if(duchesses.is(':animated')) return;
+
 		var cur_duchesse = duchesses.filter(':visible');
 		var $this = $(this);
 		var duchesse_to_show = get_duchesse_to_show.call($this, cur_duchesse);
