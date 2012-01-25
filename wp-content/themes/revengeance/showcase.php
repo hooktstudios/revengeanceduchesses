@@ -125,7 +125,7 @@ get_header(); ?>
 					if ( $featured->post_count > 1 ) :
 				?>
 				<nav class="feature-slider">
-					<ul>
+					<ul class="plain">
 					<?php
 
 						// Reset the counter so that we end up with matching elements

@@ -57,9 +57,6 @@ body {
   color: #fff;
   font: 12px Helvetica, Arial, sans-serif; }
 
-.assistive-text {
-  display: none; }
-
 .duchesse, #texture {
   position: fixed;
   top: 0;
@@ -101,6 +98,8 @@ body {
   width: 100%; }
   #main-nav ul {
     background: rgba(117, 0, 17, 0.75);
+    list-style-type: none;
+    margin-bottom: 0;
     overflow: hidden;
     padding: 0 0 0 65px; }
   #main-nav li, #main-nav a {
@@ -151,6 +150,14 @@ body {
       padding: 0 0 0 12px; }
 
 /* Content */
+ul, ol {
+  list-style-type: disc;
+  margin-bottom: 18px;
+  padding-left: 20px; }
+
+ol {
+  list-style-type: decimal; }
+
 p {
   margin-bottom: 18px; }
 
@@ -158,6 +165,10 @@ a {
   color: #6f4747;
   font-weight: bold;
   text-decoration: none; }
+
+.plain {
+  list-style: none;
+  padding-left: 0; }
 
 .entry-header {
   background: #f8f4f4;
@@ -211,10 +222,12 @@ a {
   left: -30px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   text-transform: uppercase; }
-
 #article-nav .nav-previous a {
   left: auto;
   right: -30px; }
+
+.assistive-text {
+  display: none; }
 
 /* Duchesses gallery */
 .duchesse-infos {

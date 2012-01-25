@@ -28,7 +28,7 @@
 		);
 		$duchesses = new WP_Query( $options );  
 		?>
-		<ul>
+		<ul class="plain">
 			<?php while ( $duchesses->have_posts() ) : $duchesses->the_post(); ?>
 				<?php
 				$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));

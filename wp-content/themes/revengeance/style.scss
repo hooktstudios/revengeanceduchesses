@@ -35,10 +35,6 @@ body {
 	font: 12px Helvetica, Arial, sans-serif;
 }
 
-.assistive-text{
-	display:none;
-}
-
 .duchesse, #texture {
 	position: fixed;
 	top: 0;
@@ -86,6 +82,8 @@ body {
 
 	ul {
 		background: rgba(117, 0, 17, 0.75);
+		list-style-type: none;
+		margin-bottom: 0;
 		overflow: hidden;
 		padding: 0 0 0 65px;
 	}
@@ -151,6 +149,14 @@ body {
 
 /* Content */
 
+ul, ol {
+	list-style-type: disc;
+	margin-bottom: 18px;
+	padding-left: 20px;
+}
+
+ol { list-style-type: decimal; }
+
 p {
 	margin-bottom: 18px;
 }
@@ -159,6 +165,11 @@ a {
 	color: #6f4747;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.plain {
+	list-style: none;
+	padding-left: 0;
 }
 
 .entry-header {
@@ -183,18 +194,18 @@ a {
 	text-transform: uppercase;
 }
 
-.entry-content{
-	h2{
+.entry-content {
+	h2 {
 		font-size:14px;
 		font-weight:bold;
 		margin-bottom: 12px;
 	}
-	h3{
+	h3 {
 		font-size:13px;
 		font-weight:bold;
 		margin-bottom: 12px;
 	}
-	h4{
+	h4 {
 		font-size:12px;
 		font-weight:bold;
 		margin-bottom: 12px;
@@ -213,21 +224,26 @@ a {
 	width: 34px;
 }
 
-#article-nav a {
-	color: #e0c6c6;
-	display: block;
-	font: normal 11px/28px 'ColaborateBoldRegular';
-	height: 28px;
-	position: absolute;
-	bottom: -28px;
-	left: -30px;
-	text-shadow: 0 1px rgba(0,0,0,0.75);
-	text-transform: uppercase;
+#article-nav {
+	a {
+		color: #e0c6c6;
+		display: block;
+		font: normal 11px/28px 'ColaborateBoldRegular';
+		height: 28px;
+		position: absolute;
+		bottom: -28px;
+		left: -30px;
+		text-shadow: 0 1px rgba(0,0,0,0.75);
+		text-transform: uppercase;
+	}
+
+	.nav-previous a {
+		left: auto;
+		right: -30px;
+	}
 }
-#article-nav .nav-previous a {
-	left: auto;
-	right: -30px;
-}
+
+.assistive-text { display:none; }
 
 /* Duchesses gallery */
 
