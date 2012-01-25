@@ -125,9 +125,9 @@ body {
   width: 401px; }
 
 #duchesses-nav {
-  position: absolute;
+  position: fixed;
   top: 85px;
-  right: 0;
+  left: 1025px;
   width: 160px; }
   #duchesses-nav h2 {
     border-bottom: 1px solid #fa7286;
