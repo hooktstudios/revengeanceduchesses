@@ -10,8 +10,8 @@ $(function(){
 		var cur_duchesse = duchesses.filter(':visible');
 		var $this = $(this);
 		var duchesse_to_show = get_duchesse_to_show.call($this, cur_duchesse);
-		cur_duchesse.addClass('hidden')
-		duchesse_to_show.removeClass('hidden');
+		cur_duchesse.fadeOut();
+		duchesse_to_show.fadeIn();
 	}
 
 	function get_duchesse_to_show(cur) {
