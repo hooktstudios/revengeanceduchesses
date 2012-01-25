@@ -26,7 +26,7 @@
 				'terms' => '2012',
 			))
 		);
-		$duchesses = new WP_Query( $options );  
+		$duchesses = new WP_Query( $options );
 		?>
 		<ul class="plain">
 			<?php while ( $duchesses->have_posts() ) : $duchesses->the_post(); ?>
@@ -59,7 +59,7 @@
 		<?php
 		$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));
 		$display = ($main_post->post_author == $duchesses->post->post_author || !(!$is_duchesse && $i==$the_chosen_one)) ? 'display:none;' : '';
-		?>		
+		?>
   	<section id="<?php echo $duchesses->post->post_name ?>" class="duchesse-wrap" style="<?php echo $display ?>">
   		<hgroup class="duchesse-infos">
   			<h1><?php echo $duchesses->post->post_title ?></h1>
