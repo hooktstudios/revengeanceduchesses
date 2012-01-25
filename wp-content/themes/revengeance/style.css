@@ -132,7 +132,7 @@ body {
   #duchesses-nav h2 {
     border-bottom: 1px solid #fa7286;
     color: #fca9b4;
-    font: 24px/22px "ColaborateThinRegular";
+    font: normal 24px/22px "ColaborateThinRegular";
     margin-bottom: 13px;
     padding-bottom: 4px;
     text-transform: uppercase; }
@@ -166,6 +166,25 @@ a {
   font-weight: bold;
   text-decoration: none; }
 
+strong {
+  font-weight: bold; }
+
+em {
+  font-style: italic; }
+
+h2, h3, h4 {
+  font-weight: bold;
+  margin-bottom: 12px; }
+
+h2 {
+  font-size: 14px; }
+
+h3 {
+  font-size: 13px; }
+
+h4 {
+  font-size: 12px; }
+
 .plain {
   list-style: none;
   padding-left: 0; }
@@ -188,18 +207,8 @@ a {
   right: 30px;
   text-transform: uppercase; }
 
-.entry-content h2 {
-  font-size: 14px;
-  font-weight: bold;
-  margin-bottom: 12px; }
-.entry-content h3 {
-  font-size: 13px;
-  font-weight: bold;
-  margin-bottom: 12px; }
-.entry-content h4 {
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 12px; }
+.entry-content a:hover {
+  text-decoration: underline; }
 
 .comment-link {
   background: url(img/comment.png) 0 0 no-repeat;
@@ -231,10 +240,10 @@ a {
 
 /* Duchesses gallery */
 .duchesse-infos {
-  font: 17px 'ColaborateThinRegular';
+  font: normal 17px 'ColaborateThinRegular';
   position: fixed;
-  left: 300px;
-  top: 600px;
+  left: 60px;
+  bottom: 60px;
   text-transform: uppercase; }
   .duchesse-infos h1 {
     font: 21px 'ColaborateBoldRegular'; }
