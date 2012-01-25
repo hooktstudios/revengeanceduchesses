@@ -207,6 +207,9 @@ h4 {
   right: 30px;
   text-transform: uppercase; }
 
+.entry-content {
+  line-height: 18px; }
+
 .entry-content a:hover {
   text-decoration: underline; }
 
