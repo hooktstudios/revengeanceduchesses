@@ -18,10 +18,13 @@
 		</header>
 		<div class="entry-content">
 			<?php the_content(); ?>
+			<div class="comments">
+				<div class="fb-comments" data-href="<?php echo the_permalink() ?>" data-num-posts="4" data-width="330"></div>
+			</div>
 		</div>
 		<footer class="entry-meta">
 			<?php if ( comments_open() ) : ?>
-			<?php comments_popup_link( '0', '1','%', 'comment-link'); ?>
+			<a href="#" class="comment-link"><fb:comments-count href="<?php echo the_permalink() ?>"></fb:comments-count></a>
 			<?php endif;?>
 			<nav id="article-nav">
 				<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>

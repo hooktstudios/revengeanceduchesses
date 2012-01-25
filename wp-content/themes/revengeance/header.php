@@ -29,6 +29,7 @@ if (file_exists('REVISION'))
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+<meta property="fb:app_id" content="207205489374897"/>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
@@ -84,6 +85,14 @@ if (file_exists('REVISION'))
 </head>
 
 <body <?php body_class(); ?>>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/fr_CA/all.js#xfbml=1&appId=207205489374897";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 	<div id="content-wrap">
 		<header id="header-wrap" role="banner">
 			<hgroup>
