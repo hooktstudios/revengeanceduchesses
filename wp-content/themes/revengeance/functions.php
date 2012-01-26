@@ -117,7 +117,7 @@ function twentyeleven_setup() {
 		'show_ui' => true,
 		'show_in_menu' =>true,
 		'has_archive' => true,
-		'menu_position' => 5,
+		'menu_position' => 10,
 		'capability_type' => 'page',
 		'hierarchical' => false,
 		'rewrite' => true,
