@@ -20,7 +20,7 @@ set :user, "revengeanceduchesses"
 set :default_stage, "dev"
 
 set :copy_exclude, %w( .git .gitignore config/deploy.rb config/deploy Capfile)
-set :shared_children, %w{ wp-content/uploads }
+set :shared_children, %w{ wp-content/uploads wp-content/plugins/simply-poll/log }
 
 namespace :deploy do
  desc "This is here to overide the original task"
