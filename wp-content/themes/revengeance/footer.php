@@ -22,6 +22,7 @@
 		$is_duchesse = false;
 		wp_reset_query();
 		$options = array(
+			'fields'=>array('ID', 'post_author'),
 			'post_type'=>'duchesse',
 			'orderby'=>'title',
 			'order'=>'asc',
@@ -42,13 +43,24 @@
 				if ($current_author == $duchesses->post->post_author) {
 					$is_duchesse = true;
 				}
+				// Get latest post
+				$last_post = new WP_Query(array(
+					'author'=>$duchesses->post->post_author, 
+					'status'=>'published',
+					'sort'=>'DESC',
+					'limit'=>1,
+					'fields'=>array('ID')
+				));
 				?>
-				<li>
-					<a href="<?php echo get_author_posts_url($duchesses->post->post_author) ?>"><?php echo $quartier->name ?></a>
-					<?php if (REVENGEANCE_DUCH_GALLERY && $current_author == $duchesses->post->post_author): ?>
-						<a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
-					<?php endif ?>
-				</li>
+				<?php if ($last_post->have_posts()): ?>
+					<?php $last_post->the_post(); ?>
+					<li>
+						<a href="<?php echo get_permalink($last_post->post->ID); ?>"><?php echo $quartier->name ?></a>
+						<?php if (REVENGEANCE_DUCH_GALLERY && $current_author == $duchesses->post->post_author): ?>
+							<a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
+						<?php endif ?>
+					</li>
+				<?php endif ?>
 			<?php endwhile; ?>
 		</ul>
 		<a target="_blank" href="http://fr-fr.facebook.com/pages/Revengeance-des-duchesses/185712408115123" class="social fb" title="Suivez-nous sur Facebook">Facebook</a>
