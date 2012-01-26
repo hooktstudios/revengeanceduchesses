@@ -57,7 +57,7 @@
 					<li>
 						<a href="<?php echo get_permalink($last_post->post->ID); ?>"><?php echo $quartier->name ?></a>
 						<?php if (REVENGEANCE_DUCH_GALLERY && $current_author == $duchesses->post->post_author): ?>
-							<a class="photos" href="<?php the_permalink() ?>">Ses photos</a>
+							<a class="photos" href="<?php echo get_permalink($duchesses->post->ID) ?>">Ses photos</a>
 						<?php endif ?>
 					</li>
 				<?php endif ?>
