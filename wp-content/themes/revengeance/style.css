@@ -268,6 +268,11 @@ h4 {
   .duchesse-infos h1 {
     font: 21px 'ColaborateBoldRegular'; }
 
+.vote-limit {
+  vertical-align: top;
+  font: 14px/38px "ColaborateThinRegular";
+  display: inline-block; }
+
 .vote {
   background: #65121e;
   background: rgba(101, 18, 30, 0.75);
@@ -278,6 +283,9 @@ h4 {
   padding: 0 40px;
   text-shadow: 0 1px rgba(0, 0, 0, 0.75);
   text-transform: uppercase; }
+  .vote.voted {
+    background: #65121e;
+    background: rgba(101, 18, 30, 0.35); }
 
 .duchesse {
   background: url(img/duchesses/felix_dumas.jpg) 0 0 no-repeat; }

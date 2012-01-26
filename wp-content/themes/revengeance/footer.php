@@ -68,6 +68,7 @@
 	</nav>
 	</div>
 	<nav id="main-nav">
+		
 		<?php wp_nav_menu(array(
 			'items_wrap' => '<ul id=\"%1$s\" class=\"%2$s\"><li><a href="/">Accueil</a></li>%3$s</ul>'
 			)); ?>
@@ -92,13 +93,16 @@
 			<?php
 			// Get duchesse quartier
 			$quartier = array_pop(get_the_terms($duchesses->post->ID, 'duch_quartier'));
+			// Poll answer
+			$answer = get_post_custom($duchesses->post->ID);
+			$answer = $answer['simplepoll_answer'][0];
 			?>
 			<section id="<?php echo $duchesses->post->post_name ?>" class="duchesse-wrap" style="<?php echo $display ?>">
 				<hgroup class="duchesse-infos">
 					<h1><?php echo $duchesses->post->post_title ?></h1>
 					<h2><?php echo $quartier->name ?></h2>
 					<?php if (REVENGEANCE_VOTE && $current_author == $duchesses->post->post_author): ?>
-						<a class="vote">Voter pour moi</a>
+						<a class="vote" data-answer="<?php echo $answer; ?>">Voter pour moi</a>
 					<?php endif ?>
 				</hgroup>
 				<div class="duchesse"></div>

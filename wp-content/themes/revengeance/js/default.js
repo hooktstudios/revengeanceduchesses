@@ -4,6 +4,7 @@ $(function(){
 	var arrows = $('.arrow');
 
 	arrows.on('click', arrow_click);
+	$('.vote').click(vote_click);
 
 	function arrow_click(e){
 		e.preventDefault();
@@ -31,4 +32,22 @@ $(function(){
 
 		return next_duchesse
 	}
+
+	function vote_click(e){
+		var button = $(this);
+		if(button.hasClass('voted'))
+		{
+			return;
+		}
+		data = {
+			action:'spAjaxSubmit',
+			poll:1,
+			answer:button.attr('data-answer')
+		};
+		$.post('/wp-admin/admin-ajax.php', data, function(){
+			$('.vote-limit').show();
+			button.html('Merci!  <div class="vote-limit">1 vote/jour</div>').addClass('voted');
+		})
+	}
+	
 })
