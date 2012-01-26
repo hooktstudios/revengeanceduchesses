@@ -70,6 +70,24 @@ body {
 	padding: 0 30px 60px;
 	position: relative;
 	width: 330px;
+	
+	img.alignright,
+	.alignright {
+		float: right;
+		margin-left: 5px;
+	}
+
+	img.alignleft,
+	.alignleft {
+		float: left;
+		margin-right: 5px;
+	}
+
+	img.aligncenter {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
 	footer {
 		padding-bottom: 7px;
