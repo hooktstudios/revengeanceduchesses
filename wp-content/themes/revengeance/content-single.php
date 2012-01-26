@@ -6,8 +6,15 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
+$prev_link = get_prev_post_by_author( '%link', __( 'Article précédent ›', 'twentyeleven article-nav next' ) );
+$next_link = get_next_post_by_author( '%link', __( '‹ Article suivant', 'twentyeleven article-nav next' ) );
 ?>
 
+<nav id="article-nav-top" class="content">
+	<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
+	<span class="nav-previous"><?php echo $prev_link; ?></span>
+	<span class="nav-next"><?php echo $next_link; ?></span>
+</nav><!-- #nav-single -->
 <div class="content">
 	<article>
 		<header class="entry-header">
@@ -30,8 +37,8 @@
 			<?php endif;?>
 			<nav id="article-nav">
 				<h3 class="assistive-text"><?php _e( 'Post navigation', 'twentyeleven' ); ?></h3>
-				<span class="nav-previous"><?php echo get_prev_post_by_author( '%link', __( 'Article précédent ›', 'twentyeleven article-nav next' ) ); ?></span>
-				<span class="nav-next"><?php echo get_next_post_by_author( '%link', __( '‹ Article suivant', 'twentyeleven article-nav next' ) ); ?></
+				<span class="nav-previous"><?php echo $prev_link; ?></span>
+				<span class="nav-next"><?php echo $next_link; ?></span>
 			</nav><!-- #nav-single -->
 		</footer>
 	</article>

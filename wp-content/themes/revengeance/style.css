@@ -78,6 +78,12 @@ body {
   position: relative;
   width: 575px; }
 
+#article-nav-top {
+  background: none;
+  padding: 0 0;
+  overflow: hidden;
+  width: 390px; }
+
 .content {
   background: #fff;
   color: #6f4747;
@@ -239,6 +245,17 @@ h4 {
   text-align: center;
   text-shadow: 0 1px rgba(0, 0, 0, 0.55);
   width: 34px; }
+
+#article-nav-top a {
+  color: #e0c6c6;
+  display: block;
+  font: normal 11px/28px "ColaborateBoldRegular";
+  height: 28px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  text-transform: uppercase;
+  float: left; }
+#article-nav-top .nav-previous a {
+  float: right; }
 
 #article-nav a {
   color: #e0c6c6;
