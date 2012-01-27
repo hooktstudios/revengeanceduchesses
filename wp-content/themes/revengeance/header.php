@@ -44,7 +44,7 @@ $args = array(
 $attachments = get_posts( $args );
 ?>
 <?php if (!empty($attachments)): ?>
-	<?php 
+	<?php
 	$attachment = array_pop($attachments);
 	$attachment_src = wp_get_attachment_image_src($attachment->ID, 'thumbnail');
 	?>
