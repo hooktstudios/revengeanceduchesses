@@ -70,7 +70,7 @@ body {
 	padding: 0 30px 60px;
 	position: relative;
 	width: 330px;
-	
+
 	img.alignright,
 	.alignright {
 		float: right;
@@ -315,7 +315,7 @@ h4 { font-size:12px; }
 
 	h1 { font: 21px 'ColaborateBoldRegular'; }
 }
-	
+
 .vote-limit{
 	vertical-align: top;
 	font: 14px/38px 'ColaborateThinRegular';
@@ -333,7 +333,7 @@ h4 { font-size:12px; }
 	text-shadow: 0 1px rgba(0, 0, 0, 0.75);
 	text-transform: uppercase;
 	cursor:pointer;
-	
+
 	&.voted
 	{
 		cursor:default;
@@ -376,4 +376,10 @@ h4 { font-size:12px; }
 	}
 
 	&:hover { background-color: rgba(117, 0, 17, 0.85); }
+}
+
+@media screen and (max-width: 1285px) {
+	#duchesses-nav {
+		position: absolute;
+	}
 }

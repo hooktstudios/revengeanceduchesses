@@ -363,3 +363,7 @@ h4 {
     right: 0; }
   .arrow:hover {
     background-color: rgba(117, 0, 17, 0.85); }
+
+@media screen and (max-width: 1285px) {
+  #duchesses-nav {
+    position: absolute; } }

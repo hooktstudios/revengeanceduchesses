@@ -83,6 +83,7 @@ $attachments = get_posts( $args );
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="/wp-content/themes/revengeance/js/html5.js" type="text/javascript"></script>
+<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
 <![endif]-->
 <?php
 	/* We add some JavaScript to pages with the comment form
