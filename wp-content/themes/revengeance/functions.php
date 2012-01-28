@@ -696,3 +696,4 @@ function get_next_post_by_author($link="%link &raquo;", $title="%title") {
                 return preg_replace('/%link/', '<a href="'.get_permalink($next->ID).'" rel="next">'.$title.'</a>', $link);
         }
 }
+remove_action('wp_head', 'wp_generator');
