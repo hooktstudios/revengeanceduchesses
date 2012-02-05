@@ -102,7 +102,21 @@
 					<h1><?php echo $duchesses->post->post_title ?></h1>
 					<h2><?php echo $quartier->name ?></h2>
 					<?php if (REVENGEANCE_VOTE && $current_author == $duchesses->post->post_author): ?>
-						<a class="vote" data-answer="<?php echo $answer; ?>">Voter pour moi</a>
+						<?php 
+						// check if voted
+						global $wpdb;
+						$ip = $_SERVER["REMOTE_ADDR"];
+						$pollID = 1;
+						$t = $wpdb->get_results(sprintf('SELECT `id` FROM `%s` WHERE sp_polls_id = \'%s\' AND ip = \'%s\' AND DATEDIFF(NOW(), `created`) = 0', 
+							SP_TABLE_ANSWERS, $pollID, $ip));
+					  ?>
+						<a class="vote" data-answer="<?php echo $answer; ?>">
+						  <?php if (!empty($t)): ?>
+						  Merci!  <div class="vote-limit">1 vote/jour</div>
+						  <?php else: ?>
+						  Voter pour moi
+						  <?php endif ?>
+						</a>
 					<?php endif ?>
 				</hgroup>
 				<div class="duchesse"></div>
